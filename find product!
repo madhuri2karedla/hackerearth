@@ -1,0 +1,38 @@
+/*
+// Sample code to perform I/O:
+#include <stdio.h>
+
+int main(){
+	int num;
+	scanf("%d", &num);              			// Reading input from STDIN
+	printf("Input number is %d.\n", num);       // Writing output to STDOUT
+}
+
+// Warning: Printing unwanted or ill-formatted data to output will cause the test cases to fail
+*/
+
+// Write your code here
+#include <stdio.h>  
+ int main()  
+ {  
+   unsigned N, i, answer = 1;  
+   do  
+   {  
+   scanf("%d", &N);  
+   }  
+   while(N < 1 && N > 1000);  
+   long int a[N];  
+   for(i = 0; i < N ; i++)  
+   {  
+        do  
+        {  
+             scanf("%li", &a[i]);  
+        }            
+        while(a[i] < 1 && a[i] > 1000);  
+   }  
+   for(i = 0; i < N; i++)  
+   {  
+        answer = (answer * a[i]) % (1000000007);  
+   }  
+   printf("%i", answer);  
+ }  
